@@ -78,11 +78,19 @@ public class LinearRecursion {
 
 // A.4
  public static ListNode copy( ListNode l ) {
-        // toDo 
-        return null;
+        // toDo
+     if (l == null)return null;
+
+     ListNode newNode = l;
+
+        if(l.next != null){
+            newNode = cons(l.next.element,copy(l.next.next));
+        }
+
+        return newNode;
  }
     
-// A.5  
+// A.5
  public static ListNode append( ListNode l1, ListNode l2 ) {
         // toDo
         return null;
@@ -116,12 +124,12 @@ public class LinearRecursion {
             cons(4,cons(5,cons(6,null)))
         };
 // A.4      
-//         System.out.println("test copy");
-//         for ( int i = 0; i < ll.length; i++ ) {
-//             ListNode l = cons(999,copy(ll[i]));
-//             print("l",l);       // result
-//             print("l"+i,ll[i]); // original should be untouched
-//         }
+         System.out.println("test copy");
+         for ( int i = 0; i < ll.length; i++ ) {
+             ListNode l = cons(999,copy(ll[i]));
+             print("l",l);       // result
+             print("l"+i,ll[i]); // original should be untouched
+         }
 // A.5     
 //         System.out.println("test append from left"); 
 //         for ( int i = 0; i < ll.length - 1; i++ ) {
