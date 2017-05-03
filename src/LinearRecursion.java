@@ -85,7 +85,7 @@ public class LinearRecursion {
 // A.5
     public static ListNode append( ListNode l1, ListNode l2 ) {
         if(l1 == null)return copy(l2);
-        return cons(l1.element,append(l1.next,l2));
+        return cons(l1.element, append(l1.next,l2));
     }
     
 /**********************************************
