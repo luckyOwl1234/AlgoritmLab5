@@ -22,8 +22,25 @@ public class LinearRecursion {
         
 // A.2
     public static int multiply(int m,int n) {
-        // toDo 
-        return 0;
+        // toDo
+        if (n == 0 || m == 0) return 0;
+        int result = 0;
+
+
+            if (m == 1) {
+                result = n;
+            }else if(m<0){
+                result = n + multiply(-(m + 1),n);
+                result = -result;
+            }else if(n<0){
+                result = n + multiply(m+1, -n);
+                result = -result;
+            }
+            else{
+                result = n + multiply(m - 1, n);
+            }
+
+        return result;
     } 
     
 // A.3
@@ -71,15 +88,15 @@ public class LinearRecursion {
  * ********************************************/
     public static void main(String[] args) throws IOException {
 // A.1
-     reverseInput();
+//     reverseInput();
      System.out.println();
 // A.2
-//      System.out.println(multiply(5,7));
-//      System.out.println(multiply(-5,7));
-//      System.out.println(multiply(-5,7));
-//      System.out.println(multiply(-5,-7));
-//      System.out.println(multiply(0,7));
-//      System.out.println(multiply(5,0));
+      System.out.println(multiply(5,7));
+      System.out.println(multiply(-5,7));
+      System.out.println(multiply(5,-7));
+      System.out.println(multiply(-5,-7));
+      System.out.println(multiply(0,7));
+      System.out.println(multiply(5,0));
 // A.3
 //      System.out.println(countDigits(0));
 //      System.out.println(countDigits(5));
