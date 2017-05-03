@@ -22,9 +22,9 @@ public class LinearRecursion {
         
 // A.2
     public static int multiply(int m,int n) {
-        // toDo
+
         if (n == 0 || m == 0) return 0;
-        int result = 0;
+        int result;
 
 
             if (m == 1) {
@@ -45,8 +45,14 @@ public class LinearRecursion {
     
 // A.3
     public static int countDigits(int n) {
-        // toDo 
-        return 0;
+
+        if (n < 10){
+            return 1;
+        }
+        else{
+            return 1+ countDigits(n/10);
+
+        }
     }
            
     public static ListNode cons( int element, ListNode l ) {
@@ -98,9 +104,9 @@ public class LinearRecursion {
       System.out.println(multiply(0,7));
       System.out.println(multiply(5,0));
 // A.3
-//      System.out.println(countDigits(0));
-//      System.out.println(countDigits(5));
-//      System.out.println(countDigits(123));
+      System.out.println(countDigits(0));
+      System.out.println(countDigits(5));
+      System.out.println(countDigits(123));
                 
         // An array of some test lists
         ListNode[] ll = {
