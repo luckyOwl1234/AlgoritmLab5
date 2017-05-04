@@ -80,8 +80,6 @@ public class Mobile {
 	public boolean equals(  Mobile rhs ) {
         final double eps = 0.000001;
 	    if(isSimple() && rhs.isSimple()) {
-            //if (Math.abs(this.leftLength  - rhs.leftLength ) < eps &&
-                    //Math.abs(this.rightLength  - rhs.rightLength) < eps) {
             if(Math.abs(this.weight - rhs.weight) <eps) {
                     return true;
             }
@@ -89,11 +87,11 @@ public class Mobile {
         }
             if (Math.abs(this.leftLength - rhs.leftLength) < eps &&
                     Math.abs(this.rightLength - rhs.rightLength) < eps) {
-
-                this.left.equals(rhs.left);
-                this.right.equals(rhs.right);
-
-                return true;
+                if(this.left.equals(rhs.left) &&
+                this.right.equals(rhs.right)) {
+                    return true;
+                }
+                return false;
             }
 
 	    return false;
