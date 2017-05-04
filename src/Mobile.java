@@ -58,7 +58,11 @@ public class Mobile {
 		if(isSimple()){
 			System.out.print("(" + weight + ")");
 		} else {
-		    System.out.print();
+		    System.out.print("[");
+		    left.prettyPrint();
+		    System.out.print(", " + leftLength + ", " + rightLength + ", ");
+		    right.prettyPrint();
+		    System.out.print("]");
         }
 	}
 	
