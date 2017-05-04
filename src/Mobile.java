@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Map;
 
 public class Mobile {
 	
@@ -77,7 +78,24 @@ public class Mobile {
 
 // Determine if two mobiles are equal	
 	public boolean equals(  Mobile rhs ) {
-	    // ...
+        final double eps = 0.000001;
+	    if(isSimple() && rhs.isSimple()) {
+            //if (Math.abs(this.leftLength  - rhs.leftLength ) < eps &&
+                    //Math.abs(this.rightLength  - rhs.rightLength) < eps) {
+            if(Math.abs(this.weight - rhs.weight) <eps) {
+                    return true;
+            }
+            return false;
+        }
+            if (Math.abs(this.leftLength - rhs.leftLength) < eps &&
+                    Math.abs(this.rightLength - rhs.rightLength) < eps) {
+
+                this.left.equals(rhs.left);
+                this.right.equals(rhs.right);
+
+                return true;
+            }
+
 	    return false;
 	}
 	
@@ -89,8 +107,7 @@ public class Mobile {
 	
 // Change this mobile to its mirror image
 	public void mirror() {
-         if(isSimple()){
-         } else {
+         if(!isSimple()){
              float tmpLength = leftLength;
              leftLength = rightLength;
              rightLength = tmpLength;
@@ -120,14 +137,14 @@ public class Mobile {
 			System.out.println("Balanced!");
 		else
 			System.out.println("Not balanced!");
-/*		
+
 		Mobile m22 = new Mobile( new Mobile( 2 ), 6,  new Mobile( 3 ), 4 ),
 		       m3 = new Mobile( m1, 10, m22, 2 );
 		if ( m.equals(m3) )
 			System.out.println("Equal!");		// They should be!
 		else
 			System.out.println("Not equal!");
-		
+/*
 		Mobile c = m.clone();
 		if ( c.equals(m) )
 			System.out.println("Equal!");		// They should be!

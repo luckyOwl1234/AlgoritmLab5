@@ -94,7 +94,7 @@ public class LinearRecursion {
  * ********************************************/
     public static void main(String[] args) throws IOException {
 // A.1
-//     reverseInput();
+     reverseInput();
      System.out.println();
 // A.2
       System.out.println(multiply(5,7));
