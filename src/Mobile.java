@@ -89,7 +89,17 @@ public class Mobile {
 	
 // Change this mobile to its mirror image
 	public void mirror() {
-         // ...
+         if(isSimple()){
+         } else {
+             float tmpLength = leftLength;
+             leftLength = rightLength;
+             rightLength = tmpLength;
+             Mobile tmpWeight = left;
+             left = right;
+             right = tmpWeight;
+             left.mirror();
+             right.mirror();
+         }
 	}
 	
 	private boolean isSimple() { 
@@ -128,11 +138,11 @@ public class Mobile {
 			System.out.println("Identical!");	// They should definately not!
 		else
 			System.out.println("Not identical!");
-		
-		m.mirror();
-		m.prettyPrint(); System.out.println();
-		m.mirror();
-		m.prettyPrint(); System.out.println();
 */
+		m.mirror();
+		m.prettyPrint(); System.out.println();
+		m.mirror();
+		m.prettyPrint(); System.out.println();
+
 	}
 }
