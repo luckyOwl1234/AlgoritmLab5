@@ -9,6 +9,8 @@ public class FlakeDB {
 		theFlakes.put("Convex Koch",new ConvexKoch());
 		theFlakes.put("Mandelbrot PS",new MandelbrotPScurve());
 		theFlakes.put("Concave Koch", new ConcaveKoch());
+		theFlakes.put("Penta", new Penta());
+
 		// Add your favourite flake objects here ...
 		
 	}
