@@ -22,17 +22,17 @@ public class Penta extends Flake{
         if (n <= 0)
             turtle.walk(size);
         else {
-            double l = size / 5.0;
+            double l = size / 3;
             drawSide(n - 1, l);
-            turtle.turn(72.0);
+            turtle.turn(108.0);
             drawSide(n - 1, l);
-            turtle.turn(-108.0);
+            turtle.turn(-72.0);
             drawSide(n - 1, l);
-            turtle.turn(288.0);
+            turtle.turn(-72.0);
             drawSide(n - 1, l);
-            turtle.turn(-108.0);
+            turtle.turn(-72.0);
             drawSide(n - 1, l);
-            turtle.turn(72.0);
+            turtle.turn(108.0);
             drawSide(n - 1, l);
         }
     }
