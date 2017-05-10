@@ -1,3 +1,4 @@
+package Uppgift_C;
 public class Point {
 	double x,y;
 	
