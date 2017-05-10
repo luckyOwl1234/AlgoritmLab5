@@ -100,11 +100,9 @@ public class Mobile {
 //	Return a clone of this mobile
 	public Mobile clone() {
          if(this.isSimple()){
-         	Mobile newMobile = new Mobile(this.weight);
-         	return newMobile;
+         	return new Mobile(this.weight);
 		 } else {
-         	Mobile newMobile = new Mobile(this.left.clone(), this.leftLength, this.right.clone(), this.rightLength);
-		 	return newMobile;
+         	return new Mobile(this.left.clone(), this.leftLength, this.right.clone(), this.rightLength);
          }
 	}
 	
