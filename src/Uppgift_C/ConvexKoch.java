@@ -11,21 +11,21 @@ public class ConvexKoch extends Flake {
 		turtle.turn(120.0);
 		drawSide(n,size);
 		turtle.turn(120.0);
-		drawSide(n,size);	
+		drawSide(n,size);
 	}
 
 	private void drawSide(int n,double size) {
-		if ( n <= 0 )
+		if (n <= 0)
 			turtle.walk(size);
 		else {
-			double l = size/3.0;
-			drawSide(n-1,l);
+			double l = size / 3.0;
+			drawSide(n - 1, l);
 			turtle.turn(-60.0);
-			drawSide(n-1,l);
+			drawSide(n - 1, l);
 			turtle.turn(120);
-			drawSide(n-1,l);
+			drawSide(n - 1, l);
 			turtle.turn(-60);
-			drawSide(n-1,l);
+			drawSide(n - 1, l);
 		}
 	}
 }
