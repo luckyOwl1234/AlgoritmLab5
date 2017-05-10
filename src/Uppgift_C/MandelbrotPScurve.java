@@ -1,4 +1,5 @@
 // Benoit Mandelbrot's Peano Snow Flake Curve
+package Uppgift_C;
 
 public class MandelbrotPScurve extends Flake {
 	private static int LEFT = 0;
