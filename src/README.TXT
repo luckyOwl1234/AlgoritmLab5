@@ -69,6 +69,8 @@ B5: I clone testas basfallet om den är simpel, om detta är fallet så returner
 C1: Vi får sen tidigare hur convex triangle ska se ut efter rekursioner med olika grad. Eftersom convex är motsatsen till concave som är vad resultatet ska visa så
     inverterar vi alla gradtal för vinklarna som nästa linje ska ritas med i förhållande till den föregående linjen.
 
-C2: Här ser fraktalen annorlunda ut. Linjen blir som ett kantigt omega som bildar den andra itterationen av rekursionen.
+C2: Här ser fraktalen annorlunda ut. Linjen blir som ett kantigt omega som bildar den andra itterationen av rekursionen och sedan bildar resten av bilderna.
 
-C3: vi byter här ut standard fallet att om n = 0 så ritar vi en linje till att om n = 0 så ritar vi en triangel.
+C3: vi byter här ut standard fallet att om n = 0 så ritar vi en linje till att om n = 0 så ritar vi en triangel. Vi ritar trianglar och hoppar så att vi efter en
+    sierpinski triangel alltid slutar högst upp. Detta gör att rekursionerna bara ritar fler och fler siepinskitrianglar i varandra.
+
