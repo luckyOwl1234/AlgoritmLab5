@@ -29,11 +29,11 @@ public class LinearRecursion {
 
             if (m == 1) {
                 result = n;
-            }else if(m<0){
+            }else if(m < 0){
                 result = n + multiply(-(m + 1),n);
                 result = -result;
-            }else if(n<0){
-                result = n + multiply(m+1, -n);
+            }else if(n < 0){
+                result = n + multiply(m + 1, -n);
                 result = -result;
             }
             else{
@@ -50,8 +50,7 @@ public class LinearRecursion {
             return 1;
         }
         else{
-            return 1+ countDigits(n/10);
-
+            return 1 + countDigits(n/10);
         }
     }
            
@@ -79,7 +78,7 @@ public class LinearRecursion {
 // A.4
      public static ListNode copy( ListNode l ) {
          if (l == null)return null;
-         return cons(l.element,copy(l.next));
+         return cons(l.element, copy(l.next));
     }
     
 // A.5
