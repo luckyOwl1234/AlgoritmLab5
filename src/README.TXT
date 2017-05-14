@@ -15,7 +15,10 @@ A1: I reverseInput så tar vi och rekursivt går igenom raden tecken för tecken
     som användaren har skrivit in och testar om tecknet är '\n' om det är det
     så ska den skrivit ut tecknet och gå tillbaka alla körning upp.
 
-A2:
+A2: I multiply så tar vi och adderar n med n  m gånger. n är det ena talet som användaren har skrivit och m det andra.
+    Multiplikationen hade varit n*m. Vi använder rekursion och kallar på funktionen igen fast med m-1, resultat uppdateras
+    efter varje rekursion och på så sätt får vi resultatet av m*n.
+
 A3: I countDigits tar vi och kollar basfallet om n < 10 om det är det så returnerar den 1,
     i alla andra fall så anropas funktionen med n/10.
     Detta för att om n är mindre än 10 så kan det inte utföras division med 10 och vara heltal
@@ -65,5 +68,7 @@ B5: I clone testas basfallet om den är simpel, om detta är fallet så returner
 
 C1: Vi får sen tidigare hur convex triangle ska se ut efter rekursioner med olika grad. Eftersom convex är motsatsen till concave som är vad resultatet ska visa så
     inverterar vi alla gradtal för vinklarna som nästa linje ska ritas med i förhållande till den föregående linjen.
+
 C2: Här ser fraktalen annorlunda ut. Linjen blir som ett kantigt omega som bildar den andra itterationen av rekursionen.
+
 C3: vi byter här ut standard fallet att om n = 0 så ritar vi en linje till att om n = 0 så ritar vi en triangel.

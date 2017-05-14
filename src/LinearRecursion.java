@@ -26,7 +26,6 @@ public class LinearRecursion {
         if (n == 0 || m == 0) return 0;
         int result;
 
-
             if (m == 1) {
                 result = n;
             }else if(m < 0){
